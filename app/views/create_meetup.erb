@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meetups</title>
+  <link rel="stylesheet" href="/stylesheets/normalize.css" />
+  <link rel="stylesheet" href="/stylesheets/app.css" />
+</head>
+
+<body>
+  <form id = "black-text" action="/meetups/create" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required/>
+      <br>
+      <label for="description">Description:</label>
+      <br>
+      <textarea type="text" cols = "35" rows="8" id="description" name="description" required></textarea>
+      <br>
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" required/>
+      <br>
+      <input type="submit" />
+    </form>
+</body>
+</html>

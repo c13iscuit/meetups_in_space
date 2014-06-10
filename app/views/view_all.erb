@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meetups</title>
+  <link rel="stylesheet" href="/stylesheets/normalize.css" />
+  <link rel="stylesheet" href="/stylesheets/app.css" />
+</head>
+
+<body>
+  <%@meetups.each do |mu|%>
+
+    <p><a href = '/meetup/<%=mu.id%>'><%=mu.name%></a></p>
+
+  <%end%>
+
+</body>
+</html>

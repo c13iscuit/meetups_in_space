@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/flash'
 require 'omniauth-github'
+require 'pry'
 
 require_relative 'config/application'
 
@@ -29,6 +30,10 @@ def authenticate!
   end
 end
 
+def save_meetup(name, description, location)
+  @my_meetup = Meetup.create(name: name, description: description, location: location)
+end
+
 get '/' do
   erb :index
 end
@@ -46,7 +51,6 @@ end
 get '/sign_out' do
   session[:user_id] = nil
   flash[:notice] = "You have been signed out."
-
   redirect '/'
 end
 
@@ -59,3 +63,24 @@ get '/meetup/:id' do
   erb :views
 end
 
+get '/meetups/list' do
+  @meetups = Meetup.all
+  erb :view_all
+end
+
+get '/meetups/create' do
+  erb :create_meetup
+end
+
+post '/meetups/create' do
+  @name = params['name']
+  @description = params['description']
+  @location = params['location']
+  if signed_in?
+    save_meetup(@name,@description,@location)
+    flash[:notice] = "You've created a meetup called: #{@name}!"
+    redirect "meetup/#{@my_meetup.id}"
+  else
+    authenticate!
+  end
+end
