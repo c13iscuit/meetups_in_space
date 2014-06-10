@@ -1,0 +1,229 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"se",
+				"second_rec"
+			],
+			[
+				"fi",
+				"first_rec"
+			],
+			[
+				"num",
+				"num_array"
+			],
+			[
+				"number",
+				"number"
+			],
+			[
+				"rolling",
+				"rolling_min"
+			],
+			[
+				"roll",
+				"rolling_min"
+			],
+			[
+				"guess",
+				"guess_num"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/chrisbarnett/Dropbox/launchacademy/Library/app/models/book.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/Library/app/models/checkout.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/Library/db/schema.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/sinatra-meetups-in-space/config/database.yml",
+		"/Users/chrisbarnett/Dropbox/launchacademy/sinatra-meetups-in-space/.env",
+		"/Users/chrisbarnett/Dropbox/launchacademy/sinatra-meetups-in-space/.env.example",
+		"/Users/chrisbarnett/Dropbox/launchacademy/Library/config/database.yml",
+		"/Users/chrisbarnett/Dropbox/launchacademy/Library/db/migrate/20140610183410_create_books.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/Library/db/migrate/20140610185449_remove_favorites.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/Library/db/migrate/20140610184139_add_staff_favorites.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/Library/db/migrate/20140610183900_add_author_to_books.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/Library/db/migrate/20140610184935_add_ratings.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/Blog/db/migrate/20140610174656_create_posts2.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/Blog/config/database.yml",
+		"/Users/chrisbarnett/Dropbox/launchacademy/Blog/db/migrate/20140610174757_create_comments2.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/Blog/app/models/comment.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/Blog/app/models/post.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/Library/config/database.example.yml",
+		"/Users/chrisbarnett/Dropbox/launchacademy/Blog/db/migrate/20140610173625_create_comments.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/Song/app/models/song.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/Song/db/migrate/20140610125630_create_songs.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/Song/db/migrate/20140610152037_create_artists.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/Song/db/migrate/20140610162955_remove_redundant_artist_field.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/Blog/config/database.example.yml",
+		"/Users/chrisbarnett/Dropbox/launchacademy/contact_manager/app.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/contact_manager/models/contact.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/contact_manager/views/show.erb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/contact_manager/db/seeds.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/bank_accounts/server.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/bounding_areas/lib/bounding_box.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/bounding_areas/lib/bounding_area.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/bounding_areas/spec/bounding_box_spec.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/bounding_areas/spec/bounding_area_spec.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/Song/config/database.yml",
+		"/Users/chrisbarnett/Dropbox/launchacademy/Song/config/database.example.yml",
+		"/Users/chrisbarnett/Dropbox/launchacademy/contact_manager/Gemfile",
+		"/Users/chrisbarnett/Dropbox/launchacademy/contact_manager/db/migrate/20140606172225_create_contacts.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/contact_manager/Rakefile",
+		"/Users/chrisbarnett/Dropbox/launchacademy/contact_manager/config/database.yml",
+		"/Users/chrisbarnett/Dropbox/launchacademy/comet/launcher_lunches/lib/launcher_lunches.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/comet/launcher_lunches/README.md",
+		"/Users/chrisbarnett/Dropbox/launchacademy/comet/hex_to_decimal/lib/hex_to_decimal.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/comet/rightmost_occurrence/lib/rightmost_occurrence.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/guess_the_number/solver.rb",
+		"/Users/chrisbarnett/Dropbox/launchacademy/guess_the_number/game.rb",
+		"/Users/chrisbarnett/Desktop/while !quota_met?().rb",
+		"/Users/chrisbarnett/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "app.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

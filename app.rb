@@ -53,3 +53,9 @@ end
 get '/example_protected_page' do
   authenticate!
 end
+
+get '/meetup/:id' do
+  @meetup = Meetup.find(params[:id])
+  erb :views
+end
+
