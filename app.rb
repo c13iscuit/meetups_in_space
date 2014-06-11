@@ -31,15 +31,15 @@ def authenticate!
 end
 
 def save_meetup(name, description, location)
-  @my_meetup = Meetup.create(name: name, description: description, location: location)
+  Meetup.create(name: name, description: description, location: location)
 end
 
 def create_membership(user_id, meetup_id)
-  @my_membership = Membership.create(user_id: user_id, meetup_id: meetup_id)
+  Membership.create(user_id: user_id, meetup_id: meetup_id)
 end
 
 def create_comment(user_id, meetup_id, title = nil, body)
-  @my_comment = Comment.create(user_id: user_id, meetup_id: meetup_id, title: title, body: body)
+  Comment.create(user_id: user_id, meetup_id: meetup_id, title: title, body: body)
 end
 
 get '/' do
@@ -74,7 +74,8 @@ get '/meetup/:id' do
 end
 
 post '/meetup/:meetup_id/comment' do
-  if signed_in? && Membership.find_by(user_id: session[:user_id], meetup_id: params[:meetup_id]) != nil
+  if signed_in? && Membership.find_by(
+    user_id: session[:user_id], meetup_id: params[:meetup_id]) != nil
     create_comment(session[:user_id], params[:meetup_id], params[:title], params[:body])
     redirect "meetup/#{params[:meetup_id]}"
   else
@@ -96,7 +97,7 @@ end
 delete '/memberships/:membership_id' do
   Membership.find_by(id: params[:membership_id]).destroy
   flash[:notice] = "You've left this meetup!"
-  redirect "/meetups/list"
+  redirect '/meetups/list'
 end
 
 get '/meetups/list' do
@@ -113,7 +114,7 @@ post '/meetups/create' do
   @description = params['description']
   @location = params['location']
   if signed_in?
-    save_meetup(@name,@description,@location)
+    save_meetup(@name, @description, @location)
     flash[:notice] = "You've created a meetup called: #{@name}!"
     redirect "meetup/#{@my_meetup.id}"
   else
