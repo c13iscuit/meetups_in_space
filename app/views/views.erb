@@ -30,5 +30,30 @@
     </form>
   <%end%>
 
+<p>Comments:</p>
+<div>
+  <ul>
+  <%if @comments.present?%>
+    <%@comments.each do |comment|%>
+      <li>
+        <div>
+          <p><%=comment.title%></p>
+          <p><%=comment.body%></p>
+        </div>
+      </li>
+    <%end%>
+  <%end%>
+  </ul>
+</div>
+
+
+<h3>Add a comment!</h3>
+<form action="/meetup/<%=@meetup.id%>/comment" method="post">
+  <label for="comment">Title:</label><br>
+  <input type="text" id="title" name="title" /><br>
+  <label for="comment">Your comment:</label><br>
+  <input type="text" id="body" name="body" /><br><br>
+  <input type="submit" />
+</form>
 </body>
 </html>

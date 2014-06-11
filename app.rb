@@ -38,6 +38,10 @@ def create_membership(user_id, meetup_id)
   @my_membership = Membership.create(user_id: user_id, meetup_id: meetup_id)
 end
 
+def create_comment(user_id, meetup_id, title = nil, body)
+  @my_comment = Comment.create(user_id: user_id, meetup_id: meetup_id, title: title, body: body)
+end
+
 get '/' do
   erb :index
 end
@@ -65,7 +69,18 @@ end
 get '/meetup/:id' do
   @meetup = Meetup.find(params[:id])
   @membership = @meetup.memberships.find_by(user: current_user)
+  @comments = Comment.where(meetup_id: params[:id])
   erb :views
+end
+
+post '/meetup/:meetup_id/comment' do
+  if signed_in? && Membership.find_by(user_id: session[:user_id], meetup_id: params[:meetup_id]) != nil
+    create_comment(session[:user_id], params[:meetup_id], params[:title], params[:body])
+    redirect "meetup/#{params[:meetup_id]}"
+  else
+    flash[:notice] = "You must be signed in and a member of this meetup to post a comment!"
+    redirect "meetup/#{params[:meetup_id]}"
+  end
 end
 
 post '/meetup/:meetup_id/memberships' do
