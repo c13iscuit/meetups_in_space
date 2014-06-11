@@ -11,9 +11,24 @@
 <body>
 <h1>Meetup Info Page</h1>
 
-<p><%=@meetup.name%></p>
-<p><%=@meetup.description%></p>
-<p><%=@meetup.location%></p>
+<p>Meetup: <br><%=@meetup.name%></p>
+<p>Description:<br><%=@meetup.description%></p>
+<p>Location: <br><%=@meetup.location%></p>
+<p>Members: <br></p>
+  <%@meetup.users.each do |member|%>
+    <p><img src = '<%=member.avatar_url%>' width = '30'/> <%=member.username%></p>
+  <%end%>
+
+  <%if @membership.present?%>
+    <form action="/memberships/<%= @membership.id %>" method="post">
+    <input type="submit" name="Leave" value="Leave"/>
+    <input type = "hidden" name = "_method" value = "delete"/>
+    </form>
+  <%else%>
+    <form action="/meetup/<%= @meetup.id %>/memberships" method="post">
+    <input type="submit" name="Join" value="Join"/>
+    </form>
+  <%end%>
 
 </body>
 </html>

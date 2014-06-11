@@ -34,6 +34,10 @@ def save_meetup(name, description, location)
   @my_meetup = Meetup.create(name: name, description: description, location: location)
 end
 
+def create_membership(user_id, meetup_id)
+  @my_membership = Membership.create(user_id: user_id, meetup_id: meetup_id)
+end
+
 get '/' do
   erb :index
 end
@@ -60,7 +64,24 @@ end
 
 get '/meetup/:id' do
   @meetup = Meetup.find(params[:id])
+  @membership = @meetup.memberships.find_by(user: current_user)
   erb :views
+end
+
+post '/meetup/:meetup_id/memberships' do
+  if signed_in?
+    create_membership(session[:user_id], params[:meetup_id])
+    flash[:notice] = "You've joined this meetup!"
+    redirect "/meetup/#{params[:meetup_id]}"
+  else
+    authenticate!
+  end
+end
+
+delete '/memberships/:membership_id' do
+  Membership.find_by(id: params[:membership_id]).destroy
+  flash[:notice] = "You've left this meetup!"
+  redirect "/meetups/list"
 end
 
 get '/meetups/list' do
